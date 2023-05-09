@@ -1,3 +1,5 @@
+package classes;
+
 public class Movie {
     public static final int CHILDRENS = 2;
     public static final int REGULAR = 0;
@@ -31,7 +33,7 @@ public class Movie {
         }
     }
 
-    public String getTitle (){
+    public String getTitle() {
         return title;
     }
 
@@ -39,10 +41,9 @@ public class Movie {
         return price.getCharge(daysRented);
     }
 
-    public int getFrequentRenterPoints( int daysRented) {
+    public int getFrequentRenterPoints(int daysRented) {
         return price.getFrequentRenterPoints(daysRented);
 
     }
-
 
 }
