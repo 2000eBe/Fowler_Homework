@@ -35,6 +35,5 @@ public class RentalTest {
     @Test
     public void getFrequentRenterPoints() {
         assertEquals(1, rental.getFrequentRenterPoints());
-
     }
 }
