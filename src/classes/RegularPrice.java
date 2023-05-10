@@ -1,26 +1,18 @@
 package classes;
 
-/**
- * Created with IntelliJ IDEA.
- * User: Berkling
- * Date: 14.05.14
- * Time: 12:49
- * To change this template use File | Settings | File Templates.
- */
-public class RegularPrice implements Price {
-    public int getPriceCode() {
+public class RegularPrice extends Price {
+
+    @Override
+    int getPriceCode() {
         return Movie.REGULAR;
     }
 
-    public double getCharge(int daysRented) {
-        if (daysRented > 2)
-            return (daysRented - 2) * 1.5;
-        else
-            return 2;
+    @Override
+    double getCharge(int daysRented) {
+        double result = 2;
+        if (daysRented > 2) {
+            result += (daysRented - 2) * 1.5;
+        }
+        return result;
     }
-
-    public int getFrequentRenterPoints(int daysRented) {
-        return 1;
-    }
-
 }
